@@ -1,0 +1,206 @@
+@font-face
+{
+    font-family: 'Raleway';
+    src: url('Raleway-Italic-VariableFont_wght.ttf');
+    src: url('Raleway-VariableFont_wght.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'Roboto';
+    src: url('polices/Roboto-Regular.ttf');
+    src: url('polices/Roboto-Bold.ttf');
+    src: url('polices/Roboto-Italic.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@media screen and (min-width: 1800px) {
+  .container {
+    margin: 1em 2em;
+  }
+}
+
+Body
+{
+    color: #FFBF00;
+    flex-direction: column;
+    background-attachment: fixed;
+    font-family: 'Roboto', Arial, sans-serif;
+    background: url('images/background.jpg');    
+}
+
+/* Application de la font d'écriture */
+
+section h1, footer h1, nav a
+{
+    font-family: Raleway, serif;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: gold;
+}
+
+header h1
+{
+    font-family: 'Raleway', serif;
+    font-size: 2.5em;
+    font-weight: normal;
+    margin: 0 0 0 10px;
+}
+
+header h2
+{
+    font-family: 'Raleway', serif;
+    font-size: 1.1em;
+    margin-top: 0px;
+    font-weight: normal;
+}
+
+/* En tête */
+
+Header
+{
+    display: flex;
+}
+
+#bloc_principal
+{
+    width: 900px;
+    margin: auto;
+}
+
+#logo
+{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+#logo img
+{
+    width: 59px;
+    height: 60px;
+}
+
+nav ul
+{
+    display: flex;
+    list-style-type: none;
+}
+
+nav li
+{
+    margin-right: 20px;
+}
+
+nav a 
+{
+    font-size: 12px;
+    text-decoration: none;
+    padding-bottom: 3px;
+    color: #8080FF;
+}
+
+nav a:hover
+{
+    color: #330099;
+    border-bottom: 3px solid #330099;
+}
+
+
+/* Article principal */
+
+section
+{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+article
+{
+    box-shadow: 0px 2px 5px #1c1a19;
+    background: rgba(0, 0, 0, 0.5);
+    margin-right: 25px;
+    margin-left: 35px;
+    padding: 10px;
+    flex: 5;
+}
+
+article img
+{
+    background-size: cover;
+    width: 250px;
+    height: 250px;
+    padding: 15px;
+    float: left;
+    
+}
+
+article p
+{
+    font-size: 0.8em;
+}
+
+aside
+{
+    flex: 2;
+    position:static  ;
+    max-height: 300px;
+    overflow: auto;
+    box-shadow: 0px 2px 5px #1c1a19;
+    background: url('images/background_div.jpg') ;
+    padding:  10px;
+    color: darkslateblue;
+    font-size: 0.8em;
+}
+
+article, aside
+{
+    text-align: justify;
+}
+
+aside img
+{
+    width: 150px;
+    height: 150px;
+    padding: 2px;
+    overflow: auto;
+}
+
+/* bas de page, info complémentaire*/
+
+
+#mes_univers
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#mes_univers img
+{
+    width: 250px ;
+    height: 250px;
+    overflow: hidden;
+    padding: 5px;
+}
+
+#mes_rs
+{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 20px;
+}
+
+#mes_rs ul 
+{
+    list-style: none;
+}
+
+#mes_rs img 
+{
+    width: 20%;
+    height: 20%;
+}
