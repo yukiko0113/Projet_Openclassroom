@@ -3,8 +3,6 @@
     font-family: 'Raleway';
     src: url('Raleway-Italic-VariableFont_wght.ttf');
     src: url('Raleway-VariableFont_wght.ttf');
-    font-weight: normal;
-    font-style: normal;
 }
 
 @font-face
@@ -13,149 +11,100 @@
     src: url('polices/Roboto-Regular.ttf');
     src: url('polices/Roboto-Bold.ttf');
     src: url('polices/Roboto-Italic.ttf');
-    font-weight: normal;
-    font-style: normal;
 }
 
-@media screen and (min-width: 1800px) {
-  .container {
-    margin: 1em 2em;
-  }
+*{
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #FFBF00;
+    list-style: none;
 }
 
 Body
-{
-    color: #FFBF00;
-    flex-direction: column;
-    font-family: 'Roboto', Arial, sans-serif;
-    background: url('images/background.jpg');    
-    background-repeat:no-repeat;   
-    position: relative;
+{  
+    /*https://developer.mozilla.org/fr/docs/Web/CSS/background-image*/
+    background-image: linear-gradient(rgba(0, 0, 0, 0.856), rgba(0, 0, 0, 0.5)),
+                url('images/background.jpg');   
+    margin: 3%; 
 }
 
 /* Application de la font d'écriture */
 
-section h3, footer h3, nav a
+h3, nav a
 {
-    font-family: Raleway, serif;
+    font-family: 'Raleway', serif;
     text-transform: uppercase;
-    font-weight: normal;
-    color: gold;
 }
 
-header h1
+h1
 {
     font-family: 'Raleway', serif;
     font-size: 2.5em;
-    font-weight: normal;
-    margin: 0 0 0 10px;
 }
 
-header h2
+h2
 {
     font-family: 'Raleway', serif;
     font-size: 1.1em;
-    margin-top: 0px;
-    font-weight: normal;
 }
 
 /* En tête */
 
-Header
-{
+header{
     display: flex;
+    justify-content: space-between;
 }
 
-.bloc_principal
-{
-    width: 900px;
-    margin: auto;
-}
-
-.logo
-{
+.logo{
     display: flex;
-    flex-direction: row;
-    align-items: baseline;
-}
-
-.logo img
-{
-    width: 59px;
-    height: 60px;
+    align-items: center;
+    flex-direction: column;
 }
 
 header nav {
-    margin-top: 3%;
+    width: 20%;
 }
-header nav ul
-{
+
+header ul{
     display: flex;
-    list-style-type: none;
+    justify-content: space-between;
 }
-
-header nav li
-{
-    margin-right: 20px;
-}
-
-header nav a 
-{
-    font-size: 2em;
-    text-decoration: none;
-    padding-bottom: 3px;
-    color: #8080FF;
-}
-
-header nav a:hover
-{
-    color: #330099;
-    border-bottom: 3px solid #330099;
-}
-
 
 /* Article principal */
 
-.quotidien{
-    width: 49%;
-    margin-left: 26%;
-    margin-top: 8%;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 1%;
+.home div{
+    display: flex;
+    justify-content: space-between;
 }
+article{
+ background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.199)),
+ url(/Images/background_div.jpg);
+}
+
+.moi, .univers{
+    width: 15%;
+}
+
+.quotidien{
+    width: 50%;
+}
+
+.moi img{
+    width: 60%;
+}
+
 .quotidien img{
     float: left;
     width: 30%;
     margin: 1%;
 }
 
-aside{
-    position: absolute;
-    background: url('images/background_div.jpg');
-    width: 12%;
-    top: 20%;
-    padding: 1%;
-    color: darkslateblue;
-}
-
-aside img{
-    width: 40%;
+.univers img
+{
+    width: 90%;
+    margin: 5%;
 }
 
 /* bas de page, info complémentaire*/
-
-.mes_univers
-{
-    position: absolute;    
-    width: 12%;
-    top: 20%;
-    right: 5%;
-}
-
-.mes_univers img
-{
-    width: 100%
-}
 
 footer{
     width: 15%;
@@ -198,4 +147,18 @@ footer nav li a img{
     border-radius: 20px;
     margin-top: 5%;
     margin-left: 45%;
+}
+
+@media (max-width: 800px) {
+    .home div{
+        flex-direction: column;
+        align-items: center;
+    }
+    .home article{
+        width: 90%;
+        margin-bottom: 3%;
+    }
+    header ul{
+        display: block;
+    }
 }
